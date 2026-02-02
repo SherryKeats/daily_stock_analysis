@@ -41,7 +41,7 @@ class Config:
     
     # === AI 分析配置 ===
     gemini_api_key: Optional[str] = None
-    gemini_model: str = "gemini-3-pro-preview"  # 主模型
+    gemini_model: str = "gemini-2.5-pro"  # 主模型
     gemini_model_fallback: str = "gemini-3-pro-preview-y"  # 备选模型
     
     # Gemini API 请求配置（防止 429 限流）
