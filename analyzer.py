@@ -483,13 +483,11 @@ class GeminiAnalyzer:
             import google.generativeai as genai
             from google.api_core.client_options import ClientOptions
 
-            opts = ClientOptions(
-                           api_endpoint="https://xixibu.zeabur.app/v1"
+            genai.configure(
+                 api_key="sk-rMDkLpkj7dJA9OF2nQD7UW7DpbYRs4yGDKHIMt4il2gip5jd",
+                 client_options={"api_endpoint": "http://bruder.yukinoapi.com/v1"}
             )
-           
-            # 配置 API Key
-            genai.configure(api_key=self._api_key,client_options=opts)
-            
+
             # 从配置获取模型名称
             config = get_config()
             model_name = config.gemini_model
