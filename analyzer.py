@@ -484,7 +484,7 @@ class GeminiAnalyzer:
             from google.api_core.client_options import ClientOptions
 
             opts = ClientOptions(
-                           api_endpoint="http://bruder.yukinoapi.com/v1"
+                           api_endpoint="https://new.wuxuai.com/v1"
             )
            
             # 配置 API Key
