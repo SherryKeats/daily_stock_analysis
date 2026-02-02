@@ -484,8 +484,7 @@ class GeminiAnalyzer:
             from google.api_core.client_options import ClientOptions
 
             genai.configure(
-                 api_key="sk-rMDkLpkj7dJA9OF2nQD7UW7DpbYRs4yGDKHIMt4il2gip5jd",
-                 client_options={"api_endpoint": "http://bruder.yukinoapi.com/v1"}
+                 api_key=self._api_key
             )
 
             # 从配置获取模型名称
