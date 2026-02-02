@@ -481,11 +481,14 @@ class GeminiAnalyzer:
         """
         try:
             import google.generativeai as genai
-            
-            # 配置 API Key
-            genai.configure(api_key=self._api_key,
-                           api_base=" http://bruder.yukinoapi.com/v1 "  # 中转站提供的接口地址[1](@ref)
+            from google.api_core.client_options import ClientOptions
+
+            opts = ClientOptions(
+                           api_endpoint="http://bruder.yukinoapi.com/v1"
             )
+           
+            # 配置 API Key
+            genai.configure(api_key=self._api_key,client_options=opts)
             
             # 从配置获取模型名称
             config = get_config()
